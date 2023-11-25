@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fleexbox.css">
+</head>
+<body>
+   <header>head</header>
+   <div id="main">
+    <aside>side</aside>
+    <article>
+        <h2>
+            content 
+        </h2>
+        <div id="fotoo">
+            <img src="img/pandora2.jpg" alt="">
+            <img src="img/pandora3.jpg" alt="">
+            <img src="img/pandora4.jpg" alt="">
+        </div>
+    </article>
+   </div>
+   <footer>foot</footer>
+</body>
+</html>
+
+
+
+body{
+    padding: 0;
+    background-color: rgb(147, 189, 189);
+    margin: 20px;text-align: center;
+    font-weight: bold;
+
+}
+
+header,footer{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 10vh;
+    background-color: rgb(203, 105, 105);
+
+}
+#main{
+    display: flex;
+}
+
+#main article{
+    background-color: rgb(155, 119, 154);
+    flex: auto;
+    height: 60vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+#main aside{
+    flex: 1;
+    height: 60vh;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(106, 141, 107);
+    
+
+}
+
+h2{
+    text-align: center;
+    margin-top: 55px;
+}
+
+#fotoo img{
+    text-align: center;
+    margin: 15px;  
+    width: 200px;  
+    height: 150px;
+    padding-top: 70px;
+    border-radius: 10px;
+}
