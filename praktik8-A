@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="flex2.css">
+</head>
+<body>
+    <header>
+      head
+    </header>
+    <div id="main">
+    <article>artikel</article>
+    <aside>side</aside>
+    <nav>navvv</nav>
+    </div>
+
+    <footer>bawah</footer>
+</body>
+</html>
+
+css eksternal....
+
+body{
+
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header,footer{
+    background-color: rgb(64, 161, 72);
+    height: 20vh;
+}
+
+#main{
+    display: flex;
+}
+#main aside,
+#main nav{
+    height: 60vh;
+    flex: 0 0 20vw;
+    
+}
+#main nav{
+    background-color: aquamarine;
+}
+     header,footer{
+        background-color: rgb(33, 79, 92);
+        height: 20vh;
+    }
+    
+    #main{
+        display: flex;
+    }
+    #main aside,
+    #main nav{
+        height: 60vh;
+        flex: 0 0 20vw;
+        
+    }
+    #main nav{
+        background-color: aquamarine;
+        position: absolute;
+        padding-top: 20rem;
+        top: 0;
+        width: 25%;   
+        
+    
+    }
+    #main aside{
+        background-color: blueviolet;
+    }
+    
+    #main article{
+        flex: 1;
+    }
+   
+
+#main aside{
+    background-color: blueviolet;
+}
+
+#main article{
+    flex: 1;
+}
