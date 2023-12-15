@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Lingkaran</title>
+    <script>
+        function hitungLuasDanKeliling() {
+            // Menggunakan nilai jari-jari lingkaran sebagai contoh (misalnya, r = 5)
+            var jariJari = 5;
+            
+            // Menghitung luas lingkaran
+            var luas = Math.PI * jariJari * jariJari;
+            
+            // Menghitung keliling lingkaran
+            var keliling = 2 * Math.PI * jariJari;
+            
+            // Menampilkan hasil luas dan keliling
+            document.getElementById("hasilLuas").innerHTML = `Luas lingkaran: ${luas.toFixed(2)}`;
+            document.getElementById("hasilKeliling").innerHTML = `Keliling lingkaran: ${keliling.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Kalkulator Lingkaran</h1>
+
+    <!-- Tidak perlu input karena nilai jari-jari sudah ditentukan secara konsisten -->
+    <button onclick="hitungLuasDanKeliling()">Hitung</button>
+
+    <p id="hasilLuas"></p>
+    <p id="hasilKeliling"></p>
+</body>
+</html>
