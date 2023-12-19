@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Lingkaran</title>
+    <title>luas dan keliling Lingkaran</title>
     <script>
-        function hitungLuasDanKeliling() {
-            // Menggunakan nilai jari-jari lingkaran sebagai contoh (misalnya, r = 5)
-            var jariJari = 5;
-            
-            // Menghitung luas lingkaran
-            var luas = Math.PI * jariJari * jariJari;
-            
-            // Menghitung keliling lingkaran
-            var keliling = 2 * Math.PI * jariJari;
-            
-            // Menampilkan hasil luas dan keliling
-            document.getElementById("hasilLuas").innerHTML = `Luas lingkaran: ${luas.toFixed(2)}`;
-            document.getElementById("hasilKeliling").innerHTML = `Keliling lingkaran: ${keliling.toFixed(2)}`;
-        }
+       function  hitung_lingkaran(){
+        let jari2 = document.getElementById("_jari2").value;
+        const phi = 3.14;
+        let keliling = 2 * phi * jari2;
+        let luas = phi * jari2 * jari2;
+
+        console.log("Keliling: " + keliling);
+        console.log("Luas: " + luas);
+
+        let _hasilKeliling = document.getElementById("hslkeliling")
+        let _hasilLuas = document.getElementById("hslLuas")  
+        _hasilKeliling.innerHTML = keliling
+        _hasilLuas.innerHTML = luas
+       }
     </script>
 </head>
 <body>
-    <h1>Kalkulator Lingkaran</h1>
-
-    <!-- Tidak perlu input karena nilai jari-jari sudah ditentukan secara konsisten -->
-    <button onclick="hitungLuasDanKeliling()">Hitung</button>
-
-    <p id="hasilLuas"></p>
-    <p id="hasilKeliling"></p>
+    <h1>Menghitung Keliling & Luas Lingkaran</h1>
+    <div>
+        <label for="_jari2">Masukkan Jari-Jari</label>
+        <input type="number" id="_jari2">
+        <button onclick="hitung_lingkaran()">Hitung</button>
+    </div>
+    <hr>
+    <p>
+        Keliling Lingkaran:
+        <span id="hslkeliling">0</span>
+        <br>
+        Luas Lingkaran :
+        <span id="hslLuas">0</span>
+    </p>
 </body>
 </html>
