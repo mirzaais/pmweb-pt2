@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            height: 2000px;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .container {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            height: 350px;
+            width: 300px;
+            background-color: rgb(127, 84, 122);
+        }
+
+        section {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #b69d9d;
+        }
+
+        div#textBox {
+            height: 65%;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000;
+            background-color: rgb(64, 109, 133);
+        }
+
+        .floating {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        input,
+        button {
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>simple Chat Box</legend>
+
+        <div class="container">
+            <section>
+                <h1> Chat Box</h1>
+                <div id="textBox">
+
+                </div>
+                <div class="floating">
+                    <input type="text" id="inputText">
+                    <button onclick="sendMessage()">kirim</button>
+                </div>
+            </section>
+        </div>
+
+    </fieldset>
+
+
+
+
+    <script>
+        function sendMessage() {
+          let text = document.getElementById("inputText").value;
+          let paragraf = document.createElement("P");
+          let box = document.getElementById("textBox");
+          paragraf.innerHTML = String(text);
+
+          return box.appendChild(paragraf).style.margin="10px";
+        }
+    </script>
+</body>
+</html>
